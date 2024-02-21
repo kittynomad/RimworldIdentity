@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneDef Name ="FurskinBase" Abstract ="True">
+    <defName>Furskin</defName>
+    <label>furskin</label>
+    <labelShortAdj>furskinned</labelShortAdj>
+    <description>Carriers of this gene grow thick fur all over their body, which protects them from cold temperatures.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>400</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>BeardLong</li>
+        <li>Furskin</li>
+      </tags>
+    </beardTagFilter>
+    <exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+    <statOffsets>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <FlarenStat>15</FlarenStat>
+    </statOffsets>
+    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <graphicData>
+      <fur>Furskin</fur>
+      <colorType>Hair</colorType>
+      <skinIsHairColor>true</skinIsHairColor>
+      <tattoosVisible>false</tattoosVisible>
+    </graphicData>
+  </GeneDef>
+
+ <GeneDef ParentName ="FurskinBase">
+    <defName>FluffyFurskin</defName>
+    <label>fluffy furskin</label>
+    <labelShortAdj>furskinned</labelShortAdj>
+    <description>Carriers of this gene grow thick fur all over their body, which protects them from cold temperatures. \n\n This variant of furskin is percieved as more appealing than typical fur, though it is slightly less protective against the elements. </description>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>-3</biostatMet>
+   <forcedHeadTypes>
+     <li>FluffyFurskin_Average1</li>
+     <li>FluffyFurskin_Average2</li>
+     <li>FluffyFurskin_Average3</li>
+     <li>FluffyFurskin_Narrow1</li>
+     <li>FluffyFurskin_Narrow2</li>
+     <li>FluffyFurskin_Narrow3</li>
+     <li>FluffyFurskin_Heavy1</li>
+     <li>FluffyFurskin_Heavy2</li>
+     <li>FluffyFurskin_Heavy3</li>
+     <li>FluffyFurskin_Gaunt</li>
+   </forcedHeadTypes>
+    <statOffsets>
+      <ComfyTemperatureMin>-7</ComfyTemperatureMin>
+      <FlarenStat>0</FlarenStat>
+    </statOffsets>
+    <missingGeneRomanceChanceFactor>0.8</missingGeneRomanceChanceFactor>
+  </GeneDef>
+
+  <GeneDef ParentName ="FurskinBase">
+    <defName>PlasteelFurskin</defName>
+    <label>plasteel furskin</label>
+    <labelShortAdj>furskinned</labelShortAdj>
+    <description>Carriers of this gene grow thick fur all over their body, which protects them from cold temperatures. \n\n This variant of furskin has a consistency like steel wool, offering slight protection from cuts while also being less appealing than even regular furskin. </description>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>-3</biostatMet>
+    <forcedHeadTypes>
+      <li>PlasteelFurskin_Average1</li>
+      <li>PlasteelFurskin_Average2</li>
+      <li>PlasteelFurskin_Average3</li>
+      <li>PlasteelFurskin_Narrow1</li>
+      <li>PlasteelFurskin_Narrow2</li>
+      <li>PlasteelFurskin_Narrow3</li>
+      <li>PlasteelFurskin_Heavy1</li>
+      <li>PlasteelFurskin_Heavy2</li>
+      <li>PlasteelFurskin_Heavy3</li>
+      <li>PlasteelFurskin_Gaunt</li>
+    </forcedHeadTypes>
+    <statOffsets>
+      <ComfyTemperatureMin>-7</ComfyTemperatureMin>
+      <FlarenStat>20</FlarenStat>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+    </statOffsets>
+    <missingGeneRomanceChanceFactor>0.8</missingGeneRomanceChanceFactor>
+  </GeneDef>
+
+</Defs>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TraitDef>
+    <defName>maleGender</defName>
+    <commonality>0.2</commonality>
+    <commonalityFemale>0.5</commonalityFemale>
+    
+    <modExtensions>
+    <li Class="Identity.genderTraitFactors">
+    </li>
+      </modExtensions>
+    
+    <degreeDatas>
+      <li>
+        <label>Trans Man</label>
+        <description>{PAWN_nameDef} identifies strongly as a man. Physical traits related to the Male gender give mood boosts, while traits conflicting with it will give negative mood.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>Trans</li>
+    </exclusionTags>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>femaleGender</defName>
+    <commonality>0.5</commonality>
+    <commonalityFemale>0.2</commonalityFemale>
+    <degreeDatas>
+      <li>
+        <label>Trans Woman</label>
+        <description>{PAWN_nameDef} identifies strongly as a woman. Physical traits related to the Female gender give mood boosts, while traits conflicting with it will give negative mood.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>Trans</li>
+    </exclusionTags>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>androgyneGender</defName>
+    <commonality>0.5</commonality>
+
+    <modExtensions>
+      <li Class="Identity.genderTraitFactors">
+      </li>
+    </modExtensions>
+
+    <degreeDatas>
+      <li>
+        <label>Trans: Androgyne</label>
+        <description>{PAWN_nameDef} does not want to be identified as any gender. The closer to truly androgynous they are, the happier they are.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>Trans</li>
+    </exclusionTags>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>monster</defName>
+    <commonality>0.1</commonality>
+
+    <modExtensions>
+      <li Class="Identity.genderTraitFactors">
+      </li>
+    </modExtensions>
+
+    <degreeDatas>
+      <li>
+        <label>Inhuman</label>
+        <description>{PAWN_nameDef} believes humanity is the true monster. They want to shed their humanity and become monsterlike.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>Trans</li>
+    </exclusionTags>
+  </TraitDef>
+    
+  <TraitDef>
+    <defName>noGenderPref</defName>
+    <commonality>0.3</commonality>
+    <degreeDatas>
+      <li>
+        <label>Body-content</label>
+        <description>{PAWN_nameDef} is content with their body, regardless of their identified gender. They will experience no form of dysphoria.</description>
+        <statFactors>
+          <dysMultiplier>0</dysMultiplier>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>dysSens</li>
+    </exclusionTags>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>bodySensitive</defName>
+    <commonality>0.3</commonality>
+    <degreeDatas>
+      <li>
+        <label>Body-sensitive</label>
+        <description>{PAWN_nameDef} is much more affected by dysphoria than normal.</description>
+        <statFactors>
+          <dysMultiplier>3</dysMultiplier>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>dysSens</li>
+    </exclusionTags>
+  </TraitDef>
+
+</Defs>

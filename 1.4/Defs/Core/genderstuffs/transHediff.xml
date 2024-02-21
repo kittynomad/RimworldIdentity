@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--====== Feminine traits ======-->
+  <HediffDef>
+    <defName>Breasts</defName>
+    <label>Breasts</label>
+    <description>A pair of natural feminine breasts.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <stages>
+      <li>
+        <statOffsets>
+          <FemStat>15</FemStat>
+        </statOffsets>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="Identity.genderedStuff">
+        <isFeminine>true</isFeminine>
+      </li>
+    </modExtensions>
+
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>breastImplant</defName>
+    <label>Breasts (Implanted)</label>
+    <description>Artificial breasts. Almost identical to organic.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+    <spawnThingOnRemoved>breastImplant</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.85</partEfficiency>
+    </addedPartProps>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <FemStat>15</FemStat>
+        </statOffsets>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="Identity.genderedStuff">
+        <isFeminine>true</isFeminine>
+      </li>
+    </modExtensions>
+
+  </HediffDef>
+
+  <HediffDef>
+    <defName>NarrowShoulders</defName>
+    <label>Narrow Shoulders</label>
+    <description>A pair of broad shoulders.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+    <initialSeverity>1</initialSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <FemStat>10</FemStat>
+        </statOffsets>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="Identity.genderedStuff">
+        <isMasculine>false</isMasculine>
+      </li>
+    </modExtensions>
+
+  </HediffDef>
+  
+  
+  <!--====== Masculine traits ======-->
+  <HediffDef>
+    <defName>BroadShoulders</defName>
+    <label>Broad Shoulders</label>
+    <description>A pair of broad shoulders.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <stages>
+      <li>
+        <statOffsets>
+          <MascStat>10</MascStat>
+        </statOffsets>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="Identity.genderedStuff">
+        <isMasculine>true</isMasculine>
+      </li>
+    </modExtensions>
+
+  </HediffDef>
+
+  <HediffDef>
+    <defName>NoBreasts</defName>
+    <label>No Breasts</label>
+    <description>You ain't got no breasts.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="Identity.genderedStuff">
+        <isMasculine>true</isMasculine>
+      </li>
+    </modExtensions>
+
+  </HediffDef>
+
+  <!--====== Artificial Hediff Objects/Surgeries ======-->
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>breastImplant</defName>
+    <label>artificial breasts</label>
+    <description>Artificial breasts. Almost identical to organic.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>InstallBreast</RecipeDef>
+    </descriptionHyperlinks>
+    <recipeMaker>
+      <researchPrerequisite>TopSurgery</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallBreast</defName>
+    <label>install artificial breasts</label>
+    <description>Install artificial breasts.</description>
+    <descriptionHyperlinks>
+      <ThingDef>breastImplant</ThingDef>
+      <HediffDef>breastImplant</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing artificial breasts.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>breastImplant</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>breastImplant</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+  
+  <workerClass Inherit="false">Identity.TransSexSurgery</workerClass>
+  
+  </RecipeDef>
+  
+  <!--====== Trait Givers ======-->
+  <HediffGiverSetDef>
+    <defName>Human</defName>
+    <hediffGivers>
+      <li Class="Identity.BreastGiver">
+        <hediff>Breasts</hediff>
+        <partsToAffect>
+          <li>Torso</li>
+        </partsToAffect>
+      </li>
+      <li Class="Identity.NoBreastGiver">
+        <hediff>NoBreasts</hediff>
+        <partsToAffect>
+          <li>Torso</li>
+        </partsToAffect>
+      </li>
+      <li Class="Identity.BroadShoulderGiver">
+        <hediff>BroadShoulders</hediff>
+        <partsToAffect>
+          <li>Torso</li>
+        </partsToAffect>
+      </li>
+    <li Class="Identity.NarrowShoulderGiver">
+        <hediff>NarrowShoulders</hediff>
+        <partsToAffect>
+          <li>Torso</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffGiverSetDef>
+
+  <!--====== Sex Realignment Surgery ======-->
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <jobString>Performing sex realignment surgery.</jobString>
+    <workAmount>8000</workAmount>
+    <skillRequirements>
+      <Medicine>15</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <addsHediff>Sterilized</addsHediff>
+    <defName>SexChange</defName>
+    <label>Sex Realignment</label>
+    <description>Alters the patient's bological sex to be the opposite of what it currently is. \n\n This is guaranteed to sterilize the target pawn.</description>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <workerClass Inherit="false">Identity.TransSexSurgery</workerClass>
+    <researchPrerequisite>BottomSurgery</researchPrerequisite>
+  </RecipeDef>
+  
+  <!--====== Gender Affirmation Surgery ======-->
+  
+<RecipeDef ParentName="SurgeryFlesh">
+    <jobString>Performing shoulder augmentation.</jobString>
+    <workAmount>8000</workAmount>
+    <skillRequirements>
+      <Medicine>15</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <defName>ShoulderExtend</defName>
+    <label>Shoulder Augmentation</label>
+    <description>The clavicles of the pawn are widened to give the appearance of wider shoulders.</description>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <workerClass Inherit="false">Identity.ShoulderBroadenSurgery</workerClass>
+    <researchPrerequisite>ShoulderSurgery</researchPrerequisite>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <jobString>Performing shoulder reduction.</jobString>
+    <workAmount>8000</workAmount>
+    <skillRequirements>
+      <Medicine>15</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <defName>ShoulderReduce</defName>
+    <label>Shoulder Reduction</label>
+    <description>The clavicles of the pawn are shaved down to give the appearance of more narrow shoulders.</description>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <workerClass Inherit="false">Identity.ShoulderReduceSurgery</workerClass>
+    <researchPrerequisite>ShoulderSurgery</researchPrerequisite>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <jobString>Performing top surgery.</jobString>
+    <workAmount>8000</workAmount>
+    <skillRequirements>
+      <Medicine>15</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <defName>TopSurgery</defName>
+    <label>Breast Removal</label>
+    <description>Surgically remove the patient's breasts.</description>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <workerClass Inherit="false">Identity.TopSurgery</workerClass>
+    <researchPrerequisite>TopSurgery</researchPrerequisite>
+  </RecipeDef>
+  
+</Defs>

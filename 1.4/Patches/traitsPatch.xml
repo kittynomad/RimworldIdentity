@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royalty</li>
+    </mods>
+      <match Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/TraitDef[defName="Beauty"]/degreeDatas/li[1]/statOffsets</xpath>
+            <value>
+            <dysphoriaStat>15</dysphoriaStat>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/TraitDef[defName="Beauty"]/degreeDatas/li[2]/statOffsets</xpath>
+            <value>
+            <dysphoriaStat>7</dysphoriaStat>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/TraitDef[defName="Beauty"]/degreeDatas/li[3]/statOffsets</xpath>
+            <value>
+            <dysphoriaStat>-7</dysphoriaStat>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/TraitDef[defName="Beauty"]/degreeDatas/li[4]/statOffsets</xpath>
+            <value>
+            <dysphoriaStat>-15</dysphoriaStat>
+            </value>
+          </li>
+          
+  </operations>
+    </match>
+  </Operation>
+</Patch>

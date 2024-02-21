@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--====== Research Project for Gender Drugs ======-->
+  <ResearchTabDef>
+    <defName>IdentityResearch</defName>
+    <label>Identity</label>
+  </ResearchTabDef>
+  
+  <ResearchProjectDef>
+    <defName>TransDrugProduction</defName>
+    <label>gender-affirming drug production</label>
+    <description>Research how to produce Estrogen and Testosterone, hormones often used to feminize or masculinize the body.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <tab>IdentityResearch</tab>
+    <prerequisites>
+      <li>DrugProduction</li>
+      <li>TransClothesProduction</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TransClothesProduction</defName>
+    <label>gender-affirming clothing production</label>
+    <description>Research how to create gender affirming apparel, eccentuating or obscuring gendered traits.</description>
+    <baseCost>300</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <tab>IdentityResearch</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TopSurgery</defName>
+    <label>Top Surgery</label>
+    <description>Research how to create and install artificial breasts, and remove natural ones.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.40</researchViewY>
+    <tab>IdentityResearch</tab>
+    <prerequisites>
+      <li>TransClothesProduction</li>
+      <li>TransDrugProduction</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ShoulderSurgery</defName>
+    <label>Shoulder Augmentation/Reduction</label>
+    <description>Research how to surgically increase or reduce the size of one's shoulders.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>2.40</researchViewY>
+    <tab>IdentityResearch</tab>
+    <prerequisites>
+      <li>TransClothesProduction</li>
+      <li>TransDrugProduction</li>
+    </prerequisites>
+  </ResearchProjectDef>
+    
+  <ResearchProjectDef>
+    <defName>BottomSurgery</defName>
+    <label>Bottom Surgery</label>
+    <description>Research the ability to alter a pawn's sex, greatly assisting transgender pawns.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <tab>IdentityResearch</tab>
+    <prerequisites>
+      <li>ShoulderSurgery</li>
+      <li>TopSurgery</li>
+    </prerequisites>
+  </ResearchProjectDef>
+</Defs>

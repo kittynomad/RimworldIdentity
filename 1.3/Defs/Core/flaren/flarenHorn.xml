@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- hediff -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FlarenTechHorn</defName>
+    <label>flaren techhorn</label>
+    <labelNoun>a flaren techhorn</labelNoun>
+    <description>An installed flaren implant horn. Causes occasional violent mental breaks.</description>
+    <descriptionHyperlinks>
+      <ThingDef>TechHorn</ThingDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(1,.8,1)</defaultLabelColor>
+    <tags>
+      <li>Horns</li>
+    </tags>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statFactors>
+          <PsychicSensitivity>0.4</PsychicSensitivity>
+          <ToxicSensitivity>0.8</ToxicSensitivity>
+          <PainShockThreshold>2</PainShockThreshold>
+        </statFactors>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>15</mtbDays>
+          </li>
+          <li>
+            <mentalState>InsultingSpree</mentalState>
+            <mtbDays>5</mtbDays>
+          </li>
+          <li>
+            <mentalState>MurderousRage</mentalState>
+            <mtbDays>100</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <BodyPartDef>
+    <defName>Horns</defName>
+    <label>horn</label>
+    <hitPoints>12</hitPoints>
+    <skinCovered>false</skinCovered>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>TechHorn</defName>
+    <label>Flaren Tech Horn</label>
+    <description>an advanced neural implant taking the shape of a horn. Tech Horns are highly sought after due to being one of few things Flaren respect- and, by extension, your best chance to stay in one piece. \n the Tech-horn makes the recipient more like the species it's named after, both reducing sensitivity to painful stimuli and significantly increasing aggression, often bringing violent outbursts.</description>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>ExoticMisc</li>
+    </techHediffsTags>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Apparel/FlarenHorn/techHorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1300</MarketValue>
+    </statBases>
+    
+  </ThingDef>
+
+  <!-- operation -->
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallHorn</defName>
+    <label>install flaren tech-horn</label>
+    <description>Install flaren horn.</description>
+    <descriptionHyperlinks>
+      <ThingDef>TechHorn</ThingDef>
+      <HediffDef>FlarenTechHorn</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing horn.</jobString>
+    <surgerySuccessChanceFactor>1000</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>TechHorn</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>TechHorn</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Horns</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FlarenTechHorn</addsHediff>
+  </RecipeDef>
+</Defs>

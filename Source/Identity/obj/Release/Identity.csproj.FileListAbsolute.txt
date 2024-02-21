@@ -1,0 +1,8 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Identity\Source\Identity\bin\Release\Identity.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Identity\Source\Identity\bin\Release\Identity.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Identity\Source\Identity\obj\Release\Identity.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Identity\Source\Identity\obj\Release\Identity.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Identity\Source\Identity\obj\Release\Identity.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Identity\Source\Identity\obj\Release\Identity.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Identity\Source\Identity\bin\Release\0Harmony.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Identity\Source\Identity\obj\Release\Identity.csproj.CopyComplete

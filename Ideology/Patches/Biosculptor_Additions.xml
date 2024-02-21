@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BiosculpterPod"]/comps</xpath>
+        <value>
+          <li Class="Identity.CompProperties_CompBioSculpterPod_GenderCycle">
+            <compClass>Identity.CompBiosculpterPod_GenderCycle</compClass>
+            <key>sexswap</key>
+            <label>sex swap</label>
+            <description>Inverts a pawn's sex.</description>
+            <iconPath>UI/Gizmos/BiosculpterCycleHealing</iconPath>
+            <durationDays>5</durationDays>
+            <operatingColor>(0.554,0.887,1.000)</operatingColor>
+            <requiredResearch>
+              <li>AdvancedTrans</li>
+            </requiredResearch>
+          </li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  
+</Patch>

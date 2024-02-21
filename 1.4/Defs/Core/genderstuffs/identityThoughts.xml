@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>DysphoricTrait</defName>
+    <workerClass>Identity.StatWorker_Dysphoria</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Dysphoria (Minor)</label>
+        <description>My body doesn't feel right. It's making me upset.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li>
+        <label>Dysphoria (Moderate)</label>
+        <description>I don't want to look like this... It's like I'm trapped in the wrong body</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li>
+        <label>Dysphoria (High)</label>
+        <description>I can't bear to look in the mirror. I'm disgusted by what looks back.</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+      <li>
+        <label>Dysphoria (Severe)</label>
+        <description>Why must I be so horrific??</description>
+        <baseMoodEffect>-25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>DysphoricTraitGood</defName>
+    <workerClass>Identity.StatWorker_DysphoriaGood</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Euphoria (Minor)</label>
+        <description>I'm feeling pretty good.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>Euphoria (Moderate)</label>
+        <description>Wow, is that me in the mirror?</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+      <li>
+        <label>Euphoria (High)</label>
+        <description>I'm so close to how I feel on the inside...</description>
+        <baseMoodEffect>14</baseMoodEffect>
+      </li>
+      <li>
+        <label>Euphoria (Content)</label>
+        <description>I'm finally who I want to be.</description>
+        <baseMoodEffect>25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

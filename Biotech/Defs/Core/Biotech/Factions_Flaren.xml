@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="PirateBandBase">
+    <defName>PirateFlaren</defName>
+    <label>flaren pirates</label>
+    <description>A loosely-organized group of the violent flaren species, with the intent to conquer their local area.</description>
+    <factionIconPath>UI/Icons/Xenotypes/Flaren</factionIconPath>
+    <factionNameMaker>NamerFactionPirateFlaren</factionNameMaker>
+    <settlementNameMaker>NamerSettlementPirateFlaren</settlementNameMaker>
+    <pawnSingular>flaren</pawnSingular>
+    <pawnsPlural>flaren</pawnsPlural>
+    <requiredMemes Inherit="False">
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+    </requiredMemes>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Flaren>999</Flaren>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+    <dialogFactionGreetingHostile>YttakinFactionGreetingHostile</dialogFactionGreetingHostile>
+    <dialogFactionGreetingHostileAppreciative>YttakinFactionGreetingHostileAppreciative</dialogFactionGreetingHostileAppreciative>
+    <dialogFactionGreetingWary>YttakinFactionGreetingWary</dialogFactionGreetingWary>
+    <dialogFactionGreetingWarm>YttakinFactionGreetingWarm</dialogFactionGreetingWarm>
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <!-- Normal fights, ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Drifter_Yttakin>10</Drifter_Yttakin>
+          <Thrasher_Yttakin>3</Thrasher_Yttakin>
+          <Scavenger_Yttakin>10</Scavenger_Yttakin>
+          <Pirate_Yttakin>10</Pirate_Yttakin>
+          <Grenadier_EMP>0.25</Grenadier_EMP>
+          <Grenadier_Smoke>0.25</Grenadier_Smoke>
+          <Grenadier_Destructive>2</Grenadier_Destructive>
+          <Mercenary_Gunner_Yttakin>10</Mercenary_Gunner_Yttakin>
+          <Mercenary_Heavy_Yttakin>6</Mercenary_Heavy_Yttakin>
+          <Mercenary_Slasher_Yttakin>3</Mercenary_Slasher_Yttakin>
+          <Mercenary_Sniper_Yttakin>7</Mercenary_Sniper_Yttakin>
+          <Mercenary_Elite_Yttakin>10</Mercenary_Elite_Yttakin>
+          <PirateBoss>5</PirateBoss>
+          <Warg>15</Warg>
+          <WildBoar>15</WildBoar>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, melee-only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <Thrasher_Yttakin>10</Thrasher_Yttakin>
+          <Mercenary_Slasher_Yttakin>10</Mercenary_Slasher_Yttakin>
+          <PirateBoss>5</PirateBoss>
+          <Warg>5</Warg>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, explosives with ranged mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <Grenadier_EMP>0.5</Grenadier_EMP>
+          <Grenadier_Smoke>0.5</Grenadier_Smoke>
+          <Grenadier_Destructive>10</Grenadier_Destructive>
+          <Mercenary_Gunner_Yttakin>1</Mercenary_Gunner_Yttakin>
+          <Mercenary_Heavy_Yttakin>10</Mercenary_Heavy_Yttakin>
+          <Mercenary_Elite_Yttakin>1</Mercenary_Elite_Yttakin>
+          <PirateBoss>1</PirateBoss>
+          <WildBoar>5</WildBoar>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, drifters only (very rare) -->
+        <kindDef>Combat</kindDef>
+        <commonality>2.5</commonality>
+        <maxTotalPoints>1000</maxTotalPoints>
+        <options>
+          <Drifter_Yttakin>10</Drifter_Yttakin>
+          <WildBoar>3</WildBoar>
+        </options>
+      </li>
+      <li>
+        <!-- Base defense, mainly ranged with melee mix-ins -->
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Thrasher_Yttakin>3</Thrasher_Yttakin>
+          <Pirate_Yttakin>10</Pirate_Yttakin>
+          <Grenadier_Destructive>2</Grenadier_Destructive>
+          <Mercenary_Slasher_Yttakin>3</Mercenary_Slasher_Yttakin>
+          <Mercenary_Sniper_Yttakin>10</Mercenary_Sniper_Yttakin>
+          <Mercenary_Gunner_Yttakin>10</Mercenary_Gunner_Yttakin>
+          <Mercenary_Elite_Yttakin>10</Mercenary_Elite_Yttakin>
+          <PirateBoss>10</PirateBoss>
+          <Warg>12</Warg>
+          <WildBoar>8</WildBoar>
+          <Bear_Grizzly>3</Bear_Grizzly>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Miner>1</Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Hunter>1</Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Logger>1</Logger>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Farmer>1</Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+</Defs>

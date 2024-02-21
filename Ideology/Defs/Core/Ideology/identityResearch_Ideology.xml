@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--====== Research Project for Gender Drugs ======-->
+
+  <ResearchProjectDef>
+    <defName>AdvancedTrans</defName>
+    <label>Advanced Trans Treatment</label>
+    <description>Research the ability to alter a pawn's sex through the use of a Biosculptor Pod. \n\n Unlike Bottom Surgery, sex change via biosculptor does not sterilize the pawn.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <tab>IdentityResearch</tab>
+    <prerequisites>
+      <li>ShoulderSurgery</li>
+      <li>TopSurgery</li>
+      <li>Biosculpting</li>
+    </prerequisites>
+  </ResearchProjectDef>
+</Defs>

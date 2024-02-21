@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <Proits>its</Proits>
+  <Prohis>their</Prohis>
+  <Proher>their</Proher>
+  <ProitsCap>Its</ProitsCap>
+  <ProhisCap>Their</ProhisCap>
+  <ProherCap>Their</ProherCap>
+
+  <ProitObj>it</ProitObj>
+  <ProhimObj>them</ProhimObj>
+  <ProherObj>them</ProherObj>
+  <ProitObjCap>It</ProitObjCap>
+  <ProhimObjCap>Them</ProhimObjCap>
+  <ProherObjCap>Them</ProherObjCap>
+
+  <Prohe>this pawn</Prohe>
+  <Proshe>this pawn</Proshe>
+  <Proit>it</Proit>
+  <ProheCap>This pawn</ProheCap>
+  <ProsheCap>This pawn</ProsheCap>
+  <ProitCap>It</ProitCap>
+
+</LanguageData>

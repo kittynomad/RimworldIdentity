@@ -1,0 +1,28 @@
+v 1.0.2
+-Renamed "Trans Male/Female" traits to "Trans Man/Woman". Descriptions updated accordingly.
+-Added a flaren faction which can spawn in the world.
+
+v 1.0.1.1
+-Fixed bug caused by wearing choker.
+-Fixed(?) issue with dysphoria calculation on 1.3.
+
+v 1.0.1
+-Added "Plasteel Furskin", a furskin variant that offers mild piercing protection but reduces beauty.
+-Added abstract variant of furskin (mostly for easier implimentation of variants).
+-Fixed Fluffy Furskin not loading proper visuals.
+-Monstrosity stat is no longer hidden.
+-Choker no longer takes up "neck" slot, allowing more clothing to be worn with it.
+
+v 1.0.0
+(Changes from the latest version of Identity: Dysphoria)
+-New Xenotype: Flaren
+"Violent creatures known well for their destructive conquest of anything within reach. If not for their incredibly resilient bodies and strength, the species' aggression might be it's downfall."
+-New Genes related to the Flaren Xenotype: Flaren Horns, Flaren Mindset, Very Strong Melee Damage, and 4 new hair colors
+-NEW STAT: Monstrosity
+Monstrosity increases with inhuman/extremely powerful traits, and negatively impacts the dysphoria of most colonists
+-"Monster" trait
+Inverses the effect of Monstrosity, causing positive thoughts with more monstrous traits.
+-Sex Change Surgery now sterilizes pawns.
+Sex change via Biosculptor pod won't sterilize pawns, however.
+-Research to sex change via biosculptor now only appears if Ideology is installed and required Biosculpting to be researched.
+-Dysphoria thoughts now have a greater effect on overall mood.

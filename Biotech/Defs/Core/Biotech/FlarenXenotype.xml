@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>FlarenRage</defName>
+    <label>flaren mindset</label>
+    <description>This pawn may have occasional violent outbursts.</description>
+    <descriptionHyperlinks>
+      <GeneDef>Flaren_Mindset</GeneDef>
+    </descriptionHyperlinks>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+          <li>
+            <mentalState>MurderousRage</mentalState>
+            <mtbDays>250</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  
+  <GeneCategoryDef>
+    <defName>Mindset</defName>
+    <label>mindset</label>
+    <displayPriorityInXenotype>-1</displayPriorityInXenotype>
+  </GeneCategoryDef>
+  
+
+  <GeneDef Name="FlarenMindsetBase" Abstract="True">
+    <biostatCpx>3</biostatCpx>
+    <displayCategory>Mindset</displayCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <exclusionTags>
+      <li>Brain</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <GeneDef ParentName="FlarenMindsetBase">
+    <defName>Flaren_Mindset</defName>
+    <label>flaren mindset</label>
+    <labelShortAdj>flaren-like</labelShortAdj>
+    <description>Carriers of this gene exhibit incredibly violent tendencies, and may lash out at those around them at random. They are immune to dysphoria caused by monstrous genes.</description>
+    <iconPath>UI/Icons/Genes/Gene_StrongMeleeDamage</iconPath>
+    <statOffsets>
+      <FlarenStat>200</FlarenStat>
+    </statOffsets>
+    <biostatMet>5</biostatMet>
+    <selectionWeight>0.9</selectionWeight>
+    <geneClass>Identity.Gene_Flaren_Mindset</geneClass>
+    <exclusionTags>
+      <li>Brain</li>
+    </exclusionTags>
+    <customEffectDescriptions>
+      <li>Prone to occasional violent mental breaks.</li>
+    </customEffectDescriptions>
+  </GeneDef>
+
+  <GeneDef ParentName="FlarenMindsetBase">
+    <defName>Flaren_Special</defName>
+    <label>defective flaren</label>
+    <labelShortAdj>flarenspawn</labelShortAdj>
+    <description>Very rarely, flaren are born without the aggression natural with their peers. This makes them more civil, but also much more discontent with their monstrous bodies.</description>
+    <iconPath>UI/Icons/Genes/Gene_StrongMeleeDamage</iconPath>
+    <statOffsets>
+      <FlarenStat>15</FlarenStat>
+    </statOffsets>
+    <biostatMet>1</biostatMet>
+    <selectionWeight>0.1</selectionWeight>
+    <exclusionTags>
+      <li>Brain</li>
+    </exclusionTags>
+  </GeneDef>
+  
+  
+  <GeneDef ParentName="GeneHeadboneBase">
+    <defName>Headbone_FlarenHorns</defName>
+    <label>flaren horns</label>
+    <description>Carriers of this gene grow a pair of flaren-like horns.</description>
+    <iconPath>UI/Icons/Genes/Gene_HeadboneMinihorns</iconPath>
+    <biostatMet>1</biostatMet>
+    <minAgeActive>13</minAgeActive>
+    <graphicData>
+      <graphicPath>Things/Pawn/Humanlike/HeadAttachments/FlarenHorns/FlarenHorns</graphicPath>
+      <color>(255, 255, 255)</color>
+      <layer>PostHeadgear</layer>
+    </graphicData>
+    <statOffsets>
+      <FlarenStat>15</FlarenStat>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li>
+          <symbol>horn</symbol>
+        </li>
+        <li>
+          <symbol>aggro</symbol>
+        </li>
+        <li>
+          <symbol>spiked</symbol>
+        </li>
+        <li>
+          <symbol>flaren</symbol>
+        </li>
+        <li>
+          <symbol>large</symbol>
+        </li>
+        <li>
+          <symbol>luci</symbol>
+        </li>
+        <li>
+          <symbol>beelze</symbol>
+        </li>
+        <li>
+          <symbol>hell</symbol>
+        </li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li>
+          <symbol>horn</symbol>
+        </li>
+        <li>
+          <symbol>spike</symbol>
+        </li>
+        <li>
+          <symbol>flare</symbol>
+        </li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneMeleeDamageBase">
+    <defName>MeleeDamage_Stronger</defName>
+    <label>very strong melee damage</label>
+    <labelShortAdj>overpowering</labelShortAdj>
+    <description>Carriers of this gene do much more damage in close-quarters combat. Their muscle tissue is able to quickly shift and contort to maximize any damage.</description>
+    <iconPath>UI/Icons/Genes/Gene_StrongMeleeDamage</iconPath>
+    <displayOrderInCategory>40</displayOrderInCategory>
+    <statFactors>
+      <MeleeDamageFactor>2</MeleeDamageFactor>
+    </statFactors>
+    <statOffsets>
+      <FlarenStat>20</FlarenStat>
+    </statOffsets>
+    <biostatMet>-5</biostatMet>
+    <biostatCpx>5</biostatCpx>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li>
+          <symbol>basher</symbol>
+        </li>
+        <li>
+          <symbol>striker</symbol>
+        </li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li>
+          <symbol>bash</symbol>
+        </li>
+        <li>
+          <symbol>strong</symbol>
+        </li>
+        <li>
+          <symbol>strike</symbol>
+        </li>
+        <li>
+          <symbol>hercu</symbol>
+        </li>
+        <li>
+          <symbol>achillo</symbol>
+        </li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneHairColorBase">
+    <defName>Hair_Turquoise</defName>
+    <label>turquoise hair</label>
+    <hairColorOverride>(56, 139, 148)</hairColorOverride>
+    <selectionWeight>0.1</selectionWeight>
+    <displayOrderInCategory>130</displayOrderInCategory>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+  </GeneDef>
+  <GeneDef ParentName="GeneHairColorBase">
+    <defName>Hair_HotRed</defName>
+    <label>Hot Red hair</label>
+    <hairColorOverride>(201, 48, 76)</hairColorOverride>
+    <selectionWeight>0.3</selectionWeight>
+    <displayOrderInCategory>130</displayOrderInCategory>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+  </GeneDef>
+  <GeneDef ParentName="GeneHairColorBase">
+    <defName>Hair_FlarenOrange</defName>
+    <label>Flaren Orange hair</label>
+    <hairColorOverride>(219, 160, 92)</hairColorOverride>
+    <selectionWeight>0.3</selectionWeight>
+    <displayOrderInCategory>130</displayOrderInCategory>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+  </GeneDef>
+  <GeneDef ParentName="GeneHairColorBase">
+    <defName>Hair_Midnight</defName>
+    <label>Midnight hair</label>
+    <hairColorOverride>(29, 10, 38)</hairColorOverride>
+    <selectionWeight>0.3</selectionWeight>
+    <displayOrderInCategory>130</displayOrderInCategory>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneEyeColor">
+    <defName>Eyes_Flaren</defName>
+    <label>flaren eyes</label>
+    <labelShortAdj>wild-eyed</labelShortAdj>
+    <description>Carriers of this gene have deeply red-pigmented eyes.</description>
+    <iconPath>UI/Icons/Genes/Gene_RedEyes</iconPath>
+    <selectionWeight>0.3</selectionWeight>
+    <displayOrderInCategory>0</displayOrderInCategory>
+    <graphicData>
+      <drawScale>0.28</drawScale>
+      <graphicPath>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Male/RedEyes_Male</graphicPath>
+      <graphicPathFemale>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Female/RedEyes_Female</graphicPathFemale>
+    </graphicData>
+  </GeneDef>
+
+  <XenotypeDef>
+    <defName>Flaren</defName>
+    <label>flaren</label>
+    <description>Violent creatures known well for their destructive conquest of anything within reach. If not for their incredibly resilient bodies and strength, the species' aggression might be it's downfall.\n\nNobody truly knows whether the Flaren are truly modified humans or something else entirely; no history of the species has survived to the present day, due in part to their own lack of regard for history. \n\nThe species has managed to form a society and culture of their own; despite their generally self-centered perspective, they're far from unintelligent and can stand the presence of others if it furthers their own goals.</description>
+    <descriptionShort>Violent creatures known well for their destructive conquest of anything within reach. If not for their incredibly resilient bodies and strength, the species' aggression might be it's downfall.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Flaren</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>NamerPersonDirtmole_Male</nameMaker>
+    <nameMakerFemale>NamerPersonDirtmole_Female</nameMakerFemale>
+    <chanceToUseNameMaker>0</chanceToUseNameMaker>
+    <genes>
+      <li>Skin_Blue</li>
+      <li>Furskin</li>
+      <li>Tail_Furry</li>
+      <li>FireResistant</li>
+      <li>NakedSpeed</li>
+      <li>Body_Hulk</li>
+      <li>Body_Standard</li>
+      <li>Ears_Cat</li>
+      <li>Headbone_FlarenHorns</li>
+      <li>VoiceRoar</li>
+      <li>WoundHealing_SuperFast</li>
+      <li>ToxicEnvironmentResistance_Partial</li>
+      <li>Superclotting</li>
+      <li>KillThirst</li>
+      <li>Unstoppable</li>
+      <li>Learning_Slow</li>
+      <li>Robust</li>
+      <li>Aggression_HyperAggressive</li>
+      <li>MeleeDamage_Stronger</li>
+      <li>Hair_Turquoise</li>
+      <li>Hair_HotRed</li>
+      <li>Hair_FlarenOrange</li>
+      <li>Hair_Midnight</li>
+      <li>AptitudeTerrible_Cooking</li>
+      <li>AptitudeTerrible_Plants</li>
+      <li>AptitudeTerrible_Social</li>
+      <li>AptitudePoor_Artistic</li>
+      <li>PsychicAbility_Dull</li>
+      <li>AptitudeRemarkable_Melee</li>
+      <li>Flaren_Mindset</li>
+    </genes>
+  </XenotypeDef>
+
+  <MentalBreakDef>
+    <defName>FlarenBreak</defName>
+    <mentalState>FlarenBreak</mentalState>
+    <baseCommonality>0</baseCommonality>
+    <intensity>Extreme</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>FlarenBreak</defName>
+    <stateClass>Identity.MentalState_FlarenBreak</stateClass>
+    <label>berserk</label>
+    <category>Aggro</category>
+    <blockInteractionInitiationExcept>
+      <li>Insult</li>
+    </blockInteractionInitiationExcept>
+    <blockInteractionRecipientExcept>
+      <li>Insult</li>
+    </blockInteractionRecipientExcept>
+    <blockRandomInteraction>true</blockRandomInteraction>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <nameColor>(0.9,0.2,0.5)</nameColor>
+    <beginLetter>{0} has gone berserk.\n\n[PAWN_pronoun] will attack anyone [PAWN_pronoun] sees.</beginLetter>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
+    <minTicksBeforeRecovery>40000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+    <recoveryMtbDays>0.166</recoveryMtbDays>
+    <recoveryMessage>{0}'s berserk rage has come to an end.</recoveryMessage>
+    <baseInspectLine>Mental state: Berserk</baseInspectLine>
+    <stateEffecter>Berserk</stateEffecter>
+    <tale>MentalStateBerserk</tale>
+    <recoverFromSleep>true</recoverFromSleep>
+    <inCaravanCanDo>true</inCaravanCanDo>
+  </MentalStateDef>
+  
+</Defs>

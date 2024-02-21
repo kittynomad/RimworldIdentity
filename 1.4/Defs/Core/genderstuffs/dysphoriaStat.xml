@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <StatDef>
+    <defName>dysphoriaStat</defName>
+    <label>dysphoria (generic)</label>
+    <description>Dysphoria is the level of satisfaction one has with their body, affected by body/voice related traits. \n\n Generic Dysphoria is based on traits that universally affect most human pawns (such as beauty).</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>-100</minValue>
+    <maxValue>100</maxValue>
+    <roundValue>false</roundValue>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <formatString>{0} %</formatString>
+    <roundToFiveOver>200</roundToFiveOver>
+    <showNonAbstract>true</showNonAbstract>
+    <scenarioRandomizable>true</scenarioRandomizable>
+    <showOnPawns>true</showOnPawns>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>99997</displayPriorityInCategory>
+    
+  </StatDef>
+  
+    <StatDef>
+    <defName>MascStat</defName>
+    <label>masculinity</label>
+    <description>The amount of Masculine energy this pawn gives off physically.\n\n This will have an impact on the dysphoria of trans pawns. \n\n If pawn's sex is male this value will be 30% higher than displayed.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <maxValue>100</maxValue>
+    <roundValue>false</roundValue>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <formatString>{0} %</formatString>
+    <roundToFiveOver>200</roundToFiveOver>
+    <showNonAbstract>true</showNonAbstract>
+    <scenarioRandomizable>true</scenarioRandomizable>
+    <showOnPawns>true</showOnPawns>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>99997</displayPriorityInCategory>
+    
+  </StatDef>
+
+  <StatDef>
+    <defName>FemStat</defName>
+    <label>femininity</label>
+    <description>The amount of Feminine energy this pawn gives off physically.\n\n This will have an impact on the dysphoria of trans pawns. \n\n If pawn's sex is female this value will be 30% higher than displayed.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <maxValue>100</maxValue>
+    <roundValue>false</roundValue>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <formatString>{0} %</formatString>
+    <roundToFiveOver>200</roundToFiveOver>
+    <showNonAbstract>true</showNonAbstract>
+    <scenarioRandomizable>true</scenarioRandomizable>
+    <showOnPawns>true</showOnPawns>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>99997</displayPriorityInCategory>
+    
+  </StatDef>
+
+  <StatDef>
+    <defName>FlarenStat</defName>
+    <label>monstrosity</label>
+    <description>The amount of monsterlike elements a pawn has. \n\n This negatively impacts the dysphoria of most pawns. \n\n Flaren genes contribute to this.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <maxValue>100</maxValue>
+    <roundValue>false</roundValue>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <formatString>{0} %</formatString>
+    <roundToFiveOver>200</roundToFiveOver>
+    <showNonAbstract>true</showNonAbstract>
+    <scenarioRandomizable>true</scenarioRandomizable>
+    <showOnPawns>true</showOnPawns>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>99997</displayPriorityInCategory>
+
+  </StatDef>
+
+
+  <StatDef>
+    <defName>dysMultiplier</defName>
+    <label>dysphoria multiplier</label>
+    <description>the intensity at which dysphoria is experienced.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <maxValue>100</maxValue>
+    <roundValue>false</roundValue>
+    <toStringStyle>Integer</toStringStyle>
+    <formatString>{0}x</formatString>
+    <roundToFiveOver>200</roundToFiveOver>
+    <showNonAbstract>true</showNonAbstract>
+    <scenarioRandomizable>true</scenarioRandomizable>
+    <showOnPawns>true</showOnPawns>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>99997</displayPriorityInCategory>
+    
+  </StatDef>
+  
+</Defs>

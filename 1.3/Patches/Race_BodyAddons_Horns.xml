@@ -1,0 +1,67 @@
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+
+      <!-- Hair-synced -->
+
+      <!-- left crown -->
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyAddons</xpath>
+        <value>
+          <li>
+            <path>Apparel/FlarenHorn/None</path>
+            <bodyPart>Horns</bodyPart>
+            <inFrontOfBody>true</inFrontOfBody>
+            <colorChannel>base</colorChannel>
+            <defaultOffset>Head</defaultOffset>
+            <drawSize>1</drawSize>
+            <hediffGraphics>
+              <FlarenTechHorn>Apparel/FlarenHorn/techHorn</FlarenTechHorn>
+            </hediffGraphics>
+            <offsets>
+              <south>
+                <bodyTypes>
+                  <Male>(0.0,-0.16)</Male>
+                  <Female>(0.0,-0.16)</Female>
+                  <Fat>(0.0,-0.16)</Fat>
+                  <Hulk>(0.0,-0.16)</Hulk>
+                  <Thin>(0.0,-0.16)</Thin>
+                </bodyTypes>
+                <layerOffset>-0.340</layerOffset>
+                <crownTypes>
+                  <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+              </south>
+              <north>
+                <bodyTypes>
+                  <Male>(0.0,-0.01)</Male>
+                  <Female>(0.0,-0.01)</Female>
+                  <Fat>(0.0,-0.01)</Fat>
+                  <Hulk>(0.0,-0.01)</Hulk>
+                  <Thin>(0.0,-0.01)</Thin>
+                </bodyTypes>
+                
+                <crownTypes>
+                  <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+              </north>
+              <east>
+                <bodyTypes>
+                  <Male>(0.025,-0.20)</Male>
+                  <Female>(0.025,-0.20)</Female>
+                  <Fat>(0.025,-0.20)</Fat>
+                  <Hulk>(0.025,-0.20)</Hulk>
+                  <Thin>(0.025,-0.20)</Thin>
+                </bodyTypes>
+                
+                <crownTypes>
+                  <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+              </east>
+            </offsets>
+          </li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
