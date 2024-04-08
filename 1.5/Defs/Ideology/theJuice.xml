@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="RelicInertBase" MayRequire="ludeon.rimworld.ideology">
+    <defName>RelicInertToxin</defName>
+    <label>flaren mutagen</label>
+    <description>A sort of glass container, modeled after the Flaren race. \n Many religions believe in the restorative properties of the volatile liquid contained within, although the warning labels on the container may suggest otherwise.</description>
+    <graphicData>
+      <texPath>Things/Item/Relic/juicy</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  <relicChance>5</relicChance>
+  </ThingDef>
+
+  <ThingDef ParentName="RelicInertBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>RelicInertBlahaj</defName>
+    <label>blahaj</label>
+    <description>a large stuffed shark toy. coming from a mysterious distant land, the toy has become a symbol for trans individuals across the universe.</description>
+    <graphicData>
+      <texPath>Things/Item/Relic/blahaj</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <relicChance>0.01</relicChance>
+  </ThingDef>
+  
+</Defs>

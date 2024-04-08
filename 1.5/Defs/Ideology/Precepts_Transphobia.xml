@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Issue -->
+
+  <IssueDef>
+    <defName>TransPeople</defName>
+    <label>trans people</label>
+    <iconPath>UI/Issues/Transgender</iconPath>
+  </IssueDef>
+
+  <!-- Precepts -->
+
+  <PreceptDef>
+    <defName>Trans_Abhorrent</defName>
+    <issue>TransPeople</issue>
+    <label>abhorrent</label>
+    <description>To modify the natural human body is a flagrant violation of clear moral laws.</description>
+    <impact>High</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <conflictingMemes>
+      <li>Transhumanist</li>
+    </conflictingMemes>
+    <associatedMemes>
+      <li>FleshPurity</li>
+    </associatedMemes>
+    <comps>
+     
+      <li Class="PreceptComp_SituationalThought">
+        <thought>IsTrans_Abhorrent</thought>
+      </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Trans_Abhorrent_Social</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>Trans_Disapproved</defName>
+    <issue>TransPeople</issue>
+    <label>disapproved</label>
+    <description>To modify the natural human body is an ugly, dirty act.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <conflictingMemes>
+      <li>Transhumanist</li>
+    </conflictingMemes>
+    <associatedMemes>
+      <li>FleshPurity</li>
+    </associatedMemes>
+    <comps>
+      
+      <li Class="PreceptComp_SituationalThought">
+        <thought>IsTrans_Disapproved</thought>
+      </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Trans_Disapproved_Social</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>Trans_Neutral</defName>
+    <issue>TransPeople</issue>
+    <label>neutral</label>
+    <description>People are trans. Cool.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+  </PreceptDef>
+  
+  <PreceptDef>
+    <defName>Trans_Approved</defName>
+    <issue>TransPeople</issue>
+    <label>approved</label>
+    <description>Humans should strive to reach our full potential by improving our flawed natural bodies.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <conflictingMemes>
+      <li>FleshPurity</li>
+    </conflictingMemes>
+    <associatedMemes>
+      <li>Transhumanist</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>IsTrans_Approved</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>Trans_Exalted</defName>
+    <issue>TransPeople</issue>
+    <label>exalted</label>
+    <description>The bravest of us, those who transcend the human concept of gender, deserve the highest honor.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <conflictingMemes>
+      <li>FleshPurity</li>
+    </conflictingMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>IsTrans_Exalted</thought>
+      </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Trans_Exalted_Social</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <!-- Related: Installed artificial part -->
+
+  <ThoughtDef>
+    <defName>InstalledProsthetic_Abhorrent</defName>
+    <durationDays>6</durationDays>
+    <stages>
+      <li>
+        <label>installed prosthetic</label>
+        <description>I had to install a prosthetic. This was deeply offensive to my beliefs.</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>Transhumanist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>InstalledProsthetic_Know_Abhorrent</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>installed prosthetic</label>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>Transhumanist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>InstalledProsthetic_Disapproved</defName>
+    <durationDays>6</durationDays>
+    <stages>
+      <li>
+        <label>installed prosthetic</label>
+        <description>I had to install a prosthetic. This was clearly against my beliefs.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>Transhumanist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>InstalledProsthetic_Know_Disapproved</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>installed prosthetic</label>
+        <baseOpinionOffset>-5</baseOpinionOffset>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>Transhumanist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+
+  <!-- Related: Has artificial part -->
+  
+  <ThoughtDef>
+    <defName>IsTrans_Abhorrent</defName>
+    <workerClass>Identity.ThoughtWorker_Precept_IsTrans</workerClass>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stages>
+      <li>
+        <label>trans thoughts</label>
+        <description>Why do I feel this way? I'm horrific...</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>Transhumanist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>HasProsthetic_Abhorrent</defName>
+    <workerClass>ThoughtWorker_Precept_HasProsthetic</workerClass>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stages>
+      <li>
+        <label>artificial part</label>
+        <description>I have an artificial body part in me. It's an abhorrent offense against everything I believe!</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>Transhumanist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>Trans_Abhorrent_Social</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>Identity.ThoughtWorker_Precept_IsTrans_Social</workerClass>
+    <stages>
+      <li>
+        <label>trans</label>
+        <baseOpinionOffset>-35</baseOpinionOffset>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>Transhumanist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>IsTrans_Disapproved</defName>
+    <workerClass>Identity.ThoughtWorker_Precept_IsTrans</workerClass>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stages>
+      <li>
+        <label>trans thoughts</label>
+        <description>What is this feeling in my gut... and how do i make it go away?</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>Transhumanist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>HasProsthetic_Disapproved</defName>
+    <workerClass>ThoughtWorker_Precept_HasProsthetic</workerClass>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stages>
+      <li>
+        <label>artificial part</label>
+        <description>I have an artificial body part in me. I don't believe such things are acceptable.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>Transhumanist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>Trans_Disapproved_Social</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>Identity.ThoughtWorker_Precept_IsTrans_Social</workerClass>
+    <stages>
+      <li>
+        <label>trans</label>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>Transhumanist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+
+
+  <ThoughtDef>
+    <defName>IsTrans_Approved</defName>
+    <workerClass>Identity.ThoughtWorker_Precept_IsTrans</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li>noGenderPref</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>transgender accepted</label>
+        <description>I'm glad to be where I can express myself freely.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Exalted ThoughtDefs -->
+  <ThoughtDef>
+    <defName>IsTrans_Exalted</defName>
+    <workerClass>Identity.ThoughtWorker_Precept_IsTrans</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>transgender exalted</label>
+        <description>I'm treated special for who I am. It's great.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>Trans_Exalted_Social</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>Identity.ThoughtWorker_Precept_IsTrans_Social</workerClass>
+    <stages>
+      <li>
+        <label>trans</label>
+        <baseOpinionOffset>+15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+
+  <!--
+      Removed installed prosthetic event thoughts since they're exploitable
+
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>InstalledProsthetic</eventDef>
+        <thought>InstalledProsthetic_Approved</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>InstalledProsthetic</eventDef>
+        <thought>InstalledProsthetic_Know_Approved</thought>
+      </li>
+
+  <ThoughtDef>
+    <defName>InstalledProsthetic_Approved</defName>
+    <durationDays>6</durationDays>
+    <stages>
+      <li>
+        <label>installed prosthetic</label>
+        <description>I got to install a prosthetic. It's a good thing to do.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>InstalledProsthetic_Know_Approved</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>installed prosthetic</label>
+        <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+    -->
+
+
+
+</Defs>

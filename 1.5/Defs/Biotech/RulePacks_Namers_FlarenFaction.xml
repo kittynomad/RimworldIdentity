@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  
+
+  <RulePackDef>
+    <defName>FlarenUtility</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>placeNameCore->[SylY][SylY]</li>
+        <li>placeNameCore->[SylY][SylY][SylY]</li>
+        <li>placeNameCore->[SylY][placeEnd]</li>
+        <li>placeNameCore->[SylY][SylY][placeEnd]</li>
+        <li>placeNameCore->[firstWord] [secondWord]</li>
+
+        <li>placeEnd->en</li>
+        <li>placeEnd->vil</li>
+        <li>placeEnd->viol</li>
+        <li>placeEnd->kill</li>
+        <li>placeEnd->pain</li>
+        <li>placeEnd->barg</li>
+        <li>placeEnd->berg</li>
+        <li>placeEnd->bersh</li>
+        <li>placeEnd->bug</li>
+        <li>placeEnd->bytt</li>
+        <li>placeEnd->byon</li>
+        <li>placeEnd->den</li>
+        <li>placeEnd->gen</li>
+        <li>placeEnd->yul</li>
+        <li>placeEnd->ya</li>
+        <li>placeEnd->ysh</li>
+        <li>placeEnd->gore</li>
+        <li>placeEnd->ys</li>
+        <li>placeEnd->yn</li>
+
+        <li>firstWord->violence</li>
+        <li>firstWord->pain</li>
+        <li>firstWord->anger</li>
+        <li>firstWord->vengence</li>
+        
+        <li>secondWord->flaren</li>
+        <li>secondWord->forces</li>
+        <li>secondWord->conquerers</li>
+        <li>secondWord->killers</li>
+        <li>secondWord->gore</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>SylY->WordParts/Syllables_Yttakin</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerFactionPirateFlaren</defName>
+    <include>
+      <li>FlarenUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=2)->[placeNameCore]</li>
+        <li>r_name->[placeNameCore] [faction]</li>
+        <li>r_name->[faction] of [firstWord]</li>
+
+        <li>faction->flaren</li>
+        <li>faction->aggressors</li>
+        <li>faction->pulsers</li>
+        <li>faction->roar</li>
+        <li>faction->abusers</li>
+        <li>faction->fighters</li>
+        <li>faction->fur</li>
+        <li>faction->army</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerSettlementPirateFlaren</defName>
+    <include>
+      <li>FlarenUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[placeNameCore]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+
+</Defs>
